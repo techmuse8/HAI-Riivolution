@@ -151,6 +151,7 @@ static NANDFS_Func NAND_Funcs[7] = {
 	(NANDFS_Func)(0x20005C4C+1), // handle_fs_ioctlv
 };*/
 //IOS 56 addresses
+static const struct ProxiIOS::EMU::ISFSFile *FS_Files = (struct ProxiIOS::EMU::ISFSFile*)0x200499A4;
 static NANDFS_Func NAND_Funcs[7] = {
 	// these are thumb functions so add 1 to the pointers
 	(NANDFS_Func)(0x20005774+1), // handle_fs_open
