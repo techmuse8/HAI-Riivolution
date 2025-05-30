@@ -9,6 +9,11 @@ jobs:
     container:
       image: devkitpro/devkitppc:20210726
     steps:
+    - uses: myci-actions/add-deb-repo@4
+      with:
+        repo: deb http://archive.debian.org/debian/ buster-backports main contrib non-free
+        repo-name: buster-backports
+       # keys-asc: https://gagis.hopto.org/repo/cppfw/pubkey.gpg
     - uses: actions/checkout@v4
     - run: |
         dpkg --add-architecture i386
